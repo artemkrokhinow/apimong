@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-bg); 
+  color: var(--primary-text);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --primary-bg: #f4f7fa; 
+  --sidebar-bg: #ffffff; 
+  --header-bg: #ffffff;  
+  --primary-text: #1a202c; 
+  --secondary-text: #718096; 
+  --accent-color: #4a90e2; 
+  --accent-hover: #357abd; 
+  --border-color: #e2e8f0; 
+  --message-sent-bg: #4a90e2; 
+  --message-sent-text: #ffffff;
+  --message-received-bg: #e5e9f2; 
+  --message-received-text: #1a202c;
+  --user-hover-bg: #f0f4f8;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+*  {
+  box-sizing: border-box; /* Упрощает работу с padding и border */
+}
