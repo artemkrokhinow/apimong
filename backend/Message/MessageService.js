@@ -1,4 +1,4 @@
-import Message from './models/messageModels.js'
+import Message from '../models/messageModels.js'
 
 const MessageService = {
     async create(senderId, receiverId, text){

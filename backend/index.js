@@ -1,13 +1,14 @@
+import 'dotenv/config';
 import express from 'express'
 import mongoose from 'mongoose'
 import router from "./post/routerPost.js"
 import cors from 'cors'
 import routerMessage from "./Message/routerMessage.js"
-import rrouter from "./Routes/routerRegistr.js"
+import rrouter  from "./auth/routerRegistr.js"
 import { Server } from 'socket.io'
 import {createServer} from 'http'
 import MessageService from './Message/MessageService.js'
-import 'dotenv/config';
+
 
 const PORT = process.env.PORT
 const DB_URL = process.env.DB_URL
@@ -28,6 +29,9 @@ io.on('connection', (socket)=>{
    
     socket.on('addUser', (userId)=>{
         let userSockets = onlineUsers.get(userId) || [];
+        if(!userSockets.includes(socket.id)){
+            userSockets.push(socket.id)
+        }
         userSockets.push(socket.id)
        onlineUsers.set(userId, userSockets)
         console.log(`+ User ${userId} added. Online users now:`, onlineUsers);

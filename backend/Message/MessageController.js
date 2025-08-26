@@ -1,5 +1,5 @@
 import MongoMessage from '../models/messageModels.js'
-import MessageService from '../Message/MessageService.js'
+import MessageService from './MessageService.js'
 const MessageController = {
     async create(req, res){
         try{

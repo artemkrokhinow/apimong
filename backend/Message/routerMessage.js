@@ -1,4 +1,4 @@
-import MessageController from "../auth/MessageController.js"
+import MessageController from "./MessageController.js"
 import MessageService from "./MessageService.js"
 import {Router} from'express'
 import authMiddleware  from '../middleware/authMiddleware.js'

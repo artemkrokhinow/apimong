@@ -1,4 +1,4 @@
-import RegistrController from '../auth/RegistrController.js'
+import RegistrController from './RegistrController.js'
 import {Router} from'express'
 import authMiddleware  from '../middleware/authMiddleware.js'
 import roleMiddleware from '../middleware/roleMiddleware.js';
